@@ -26,3 +26,4 @@ Every possible number of people that can be in the house.
 
 	- Restricts the value between 2 and 100
 	- Making test with output -> 2, should return an array -> [1]
+	- Including any possible number of people, including the cats.
