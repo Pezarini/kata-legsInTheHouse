@@ -25,3 +25,4 @@ Every possible number of people that can be in the house.
 ## Pomodoro 1 🍅 Driver: Pk
 
 	- Restricts the value between 2 and 100
+	- Making test with output -> 2, should return an array -> [1]
