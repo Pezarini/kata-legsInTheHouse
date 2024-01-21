@@ -1,23 +1,23 @@
+const howManyPeopleAreThereInTheHouse = (hasCats, legsInTheHouse) => {
+	let personsInTheHouse = 0;
+	let legsOfPerson = 0;
+
+	while (legsOfPerson < legsInTheHouse) {
+		legsOfPerson += 2 + hasCats;
+		personsInTheHouse += 1;
+	}
+
+	return personsInTheHouse;
+}
 const legsInTheHouse = (legsInTheHouse) => {
 
 	if (legsInTheHouse < 2 || legsInTheHouse > 100) {
 		return false;
 	}
 
-	let personsWithoutCatsInTheHouse = 0;
-	let legsOfPersons = 0;
-	while (legsOfPersons < legsInTheHouse) {
-		legsOfPersons += 2;
-		personsWithoutCatsInTheHouse += 1;
-	}
-
-	let personsWithCatsInTheHouse = 0;
-	let legsOfPersonsWithCats = 0;
-	while (legsOfPersonsWithCats < legsInTheHouse) {
-		legsOfPersonsWithCats += 2 + 4;
-		personsWithCatsInTheHouse += 1;
-	}
-
+	const personsWithoutCatsInTheHouse = howManyPeopleAreThereInTheHouse(0, legsInTheHouse);
+	const personsWithCatsInTheHouse = howManyPeopleAreThereInTheHouse(4, legsInTheHouse);
+	
 	if (legsInTheHouse > 5) {
 		return [personsWithCatsInTheHouse, personsWithoutCatsInTheHouse];
 	}
